@@ -1,22 +1,21 @@
 # Machine Learning - Screen Time Health Impact (HW2)
 
-**Home Assignment 2 (Grade 95, M.Sc. Data Science, HIT). An advanced Machine Learning project analyzing the health effects of screen time on children and youth in India. Based on the [Kaggle Indian Kids Screentime 2025](https://www.kaggle.com/datasets/ankushpanday2/indian-kids-screentime-2025) dataset.**
-
-## Overview
-This project investigates the relationship between screen habits (age, gender, device type, usage ratios) and health outcomes (anxiety, poor sleep, eye strain) among 9,712 Indian children. The study involves a comprehensive comparison of seven different machine learning algorithms, focusing on feature interaction and model stability.
+**Assignment Solution (Grade 95, M.Sc. Data Science, HIT). Binary health-impact classification for 9,712 Indian children, based on the [Kaggle Indian Kids Screentime 2025](https://www.kaggle.com/datasets/ankushpanday2/indian-kids-screentime-2025) dataset.**
 
 ## Key Features
-- **Advanced EDA & Feature Engineering:** Created interaction terms and domain-specific features to uncover deep relationships between device usage and health metrics.
-- **Algorithm Comparison:** Evaluated 7 different models, including Logistic Regression, Decision Trees, Random Forest, and XGBoost.
-- **Winning Model - XGBoost:** Achieved a peak **accuracy of 86%**. The model was fine-tuned to eliminate overfitting issues, ensuring high generalization on test data.
-- **Demographic Insights:** Analysis of urban vs. rural differences and the impact of exceeding IAP (Indian Academy of Pediatrics) guidelines.
+- **Feature Engineering:** Engineered the target (`Healthy`, derived from the multi-label health-impacts field) plus interaction and domain features — age × screen-time interaction, teen flag, and recreational-hours decomposition.
+- **Algorithm Comparison:** 7 classifiers (Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, AdaBoost, KNN, XGBoost) evaluated with explicit train-test gap tracking across accuracy, precision, recall, and F1 to flag overfitting.
+- **Winning Model — XGBoost:** 86% test accuracy with the best accuracy-generalization balance across all configurations.
+- **Explainability (SHAP):** Test-set summary plot identifying the dominant screen-time drivers of health outcomes.
+- **Demographic Insights:** Urban vs. rural comparison and analysis of children exceeding the recommended screen-time limits (IAP guidelines).
 
-## Tech Stack
-- **Language:** Python
-- **Libraries:** Scikit-learn, XGBoost, Pandas, NumPy
-- **Visualization:** Matplotlib, Seaborn
+## Results
+XGBoost on the held-out test set: **accuracy = 86%** — selected over 6 competing models for combining top accuracy with the smallest train-test gaps.
 
 ## Repository Structure
-- `Screen_Time_Health_Impact_Analysis.ipynb`: Full implementation, including hyperparameter optimization and model selection.
-- `assignment 2.pdf`: Original assignment instructions and requirements.
-- `Indian_Kids_Screen_Time.csv`: The dataset used for the analysis.
+- `Screen_Time_Health_Impact_Analysis.ipynb`: Full implementation (Hebrew narrative; code and charts are language-independent).
+- `Assignment_Instructions_2.pdf`: Original assignment instructions.
+- `Indian_Kids_Screen_Time.csv`: The raw dataset (9,712 records, 8 features).
+
+---
+*Course: Machine Learning, M.Sc. Data Science, HIT · Python, Pandas, NumPy, Scikit-learn, XGBoost, SHAP*
