@@ -16,6 +16,3 @@ XGBoost on the held-out test set: **accuracy = 86%** — selected over 6 competi
 - `Screen_Time_Health_Impact_Analysis.ipynb`: Full implementation (Hebrew narrative; code and charts are language-independent).
 - `Assignment_Instructions_2.pdf`: Original assignment instructions.
 - `Indian_Kids_Screen_Time.csv`: The raw dataset (9,712 records, 8 features).
-
----
-*Course: Machine Learning, M.Sc. Data Science, HIT · Python, Pandas, NumPy, Scikit-learn, XGBoost, SHAP*
